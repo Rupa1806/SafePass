@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SafePass - Password Security Auditor</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="audit-container">
+        <header>
+            <h2>🛡️ SafePass</h2>
+            <p>Enterprise Password Security Auditor</p>
+        </header>
+
+        <div class="input-section">
+            <label for="passwordInput">Enter Password to Audit</label>
+            <div class="password-wrapper">
+                <input type="password" id="passwordInput" placeholder="Type password...">
+                <button id="toggleView">Show</button>
+            </div>
+        </div>
+
+        <div class="meter-section">
+            <div class="meter-bar-bg">
+                <div id="meterBar" class="meter-bar-fill"></div>
+            </div>
+            <p class="score-text">Security Score: <span id="scoreLabel">0%</span> (<span id="strengthLabel">Dangerous</span>)</p>
+        </div>
+
+        <div id="threatAlert" class="alert-banner hidden">
+            ⚠️ CRITICAL THREAT: This password is on the global blacklist of leaked credentials!
+        </div>
+
+        <div class="analytics-grid">
+            <div class="panel">
+                <h3>Compliance Checklist</h3>
+                <ul class="checklist">
+                    <li id="ruleLength" class="fail">❌ At least 12 characters</li>
+                    <li id="ruleUpper" class="fail">❌ Contains uppercase letter</li>
+                    <li id="ruleLower" class="fail">❌ Contains lowercase letter</li>
+                    <li id="ruleNumber" class="fail">❌ Contains a number</li>
+                    <li id="ruleSpecial" class="fail">❌ Contains special character</li>
+                </ul>
+            </div>
+
+            <div class="panel crack-panel">
+                <h3>Estimated Crack Time</h3>
+                <p id="crackTime" class="time-display">0 seconds</p>
+                <small>Calculated via standard mathematical entropy estimations.</small>
+            </div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
