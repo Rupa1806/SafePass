@@ -68,7 +68,7 @@ SafePass/
 ### Clone Repository
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/SafePass.git
+git clone https://github.com/Rupa1806/SafePass.git
 ```
 
 ### Open Project
@@ -76,6 +76,9 @@ git clone https://github.com/YOUR_USERNAME/SafePass.git
 Simply open:
 index.html in any modern web browser.
 No installation or backend server is required.
+
+
+- ##Live demo:https://rupa1806.github.io/SafePass/
 
 ## 🔍 How It Works
 
